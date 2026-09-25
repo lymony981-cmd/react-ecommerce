@@ -60,7 +60,7 @@ function Home() {
               ))}
             </div>
             <div className="flex justify-center">
-              <button className="bg-transparent border-primary border-1 px-8 py-2 mt-8 rounded-lg hover:bg-primary hover:text-white cursor-pointer transition-all ease-in-out  ">
+              <button className="bg-transparent border-primary px-8 py-2 mt-8 rounded-lg hover:bg-primary hover:text-white cursor-pointer transition-all ease-in-out  ">
                 Expore me{" "}
               </button>
             </div>
