@@ -2,22 +2,25 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Header() {
-  const [isActiveNavbar , setIsActiveNavbar] = useState(false) 
+  const [isActiveNavbar, setIsActiveNavbar] = useState(false);
   return (
     <>
       <header className="flex bg-white justify-between px-8 lg:px-40 border-gray-200 border-b py-4 ">
-        <button onClick={() => setIsActiveNavbar(true)} className="block lg:hidden  cursor-pointer hover:text-yellow-400">
+        <button
+          onClick={() => setIsActiveNavbar(true)}
+          className="block lg:hidden cursor-pointer hover:text-yellow-400"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
-            class="size-6"
+            className="size-6"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
             />
           </svg>
@@ -31,8 +34,7 @@ function Header() {
             <NavLink
               to="/"
               className="hover:underline decoration-yellow-200 transition-all 
-              aria-[current=page]:underline aria-[current=page]:text-yellow-500" 
-              
+              aria-[current=page]:underline aria-[current=page]:text-yellow-500"
             >
               Home
             </NavLink>
@@ -46,7 +48,7 @@ function Header() {
               Products
             </NavLink>
           </li>
-          <li> 
+          <li>
             <NavLink
               to="/about"
               className="hover:underline decoration-yellow-200 transition-all 
@@ -57,7 +59,7 @@ function Header() {
           </li>
           <li>
             <NavLink
-            to={"contact"}
+              to={"contact"}
               className="hover:underline decoration-yellow-200 transition-all
                aria-[current=page]:underline aria-[current=page]:text-yellow-500"
             >
@@ -114,13 +116,18 @@ function Header() {
                 d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
               />
             </svg>
-          </button>                                                      
+          </button>
         </div>
       </header>
 
-  <header className={`${isActiveNavbar? '-left-0' : ' -left-full' } absolute top-0  z-[999] pt-8 p-4 w-[260px] bg-primary transition-all ease-in-out duration-200 text-white min-h-screen `}>
+      <header
+        className={`${isActiveNavbar ? "left-0" : "-left-full"} absolute top-0 z-50 pt-8 p-4 w-64 bg-primary transition-all ease-in-out duration-200 text-white min-h-screen`}
+      >
         <div className="flex justify-end">
-          <button onClick={() => setIsActiveNavbar(false)} className="border border-white border-dashed rounded-full p-2 hover:bg-gray-700 cursor-pointer ">
+          <button
+            onClick={() => setIsActiveNavbar(false)}
+            className="border border-white border-dashed rounded-full p-2 hover:bg-gray-700 cursor-pointer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -139,10 +146,34 @@ function Header() {
         </div>
 
         <div className="flex flex-col mt-4">
-            <a href="" className="hover:bg-gray-700 p-2 transition-all rounded-lg">+Home</a>
-            <a href="" className="hover:bg-gray-700 p-2 transition-all rounded-lg">+Products</a>
-            <a href=""className="hover:bg-gray-700 p-2 transition-all rounded-lg">+About</a>
-            <a href=""className="hover:bg-gray-700 p-2 transition-all rounded-lg" >+Contact</a>
+          <NavLink
+            to="/"
+            onClick={() => setIsActiveNavbar(false)}
+            className="hover:bg-gray-700 p-2 transition-all rounded-lg"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/products"
+            onClick={() => setIsActiveNavbar(false)}
+            className="hover:bg-gray-700 p-2 transition-all rounded-lg"
+          >
+            Products
+          </NavLink>
+          <NavLink
+            to="/about"
+            onClick={() => setIsActiveNavbar(false)}
+            className="hover:bg-gray-700 p-2 transition-all rounded-lg"
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/contact"
+            onClick={() => setIsActiveNavbar(false)}
+            className="hover:bg-gray-700 p-2 transition-all rounded-lg"
+          >
+            Contact
+          </NavLink>
         </div>
       </header>
     </>
@@ -150,4 +181,3 @@ function Header() {
 }
 
 export default Header;
- 
