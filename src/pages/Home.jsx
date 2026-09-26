@@ -22,6 +22,8 @@ function Home() {
     fetchData();
   }, []);
 
+
+
   return (
     <>
       {loading == true && (
@@ -30,10 +32,9 @@ function Home() {
         </div>
       )}
 
-      <div></div>
       {loading == false && (
         <div className="font-jost">
-          <div className=" h-screen bg-[url('./image/slide_02.jpg')] bg-center bg-cover lg:bg-contain bg-no-repeat bg-secondary px-8 lg:px-40 flex items-center">
+          <div style={{ backgroundImage : "url ('./image/slide_02.jpg')" }}  className=" h-screen bg-center bg-cover lg:bg-contain bg-no-repeat bg-secondary px-8 lg:px-40 flex items-center">
             <div>
               <h2 className="text-xl font-bold">New Collection</h2>
               <h1 className="text-6xl lg:text-7xl font-bold">
