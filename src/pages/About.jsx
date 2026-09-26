@@ -7,7 +7,7 @@ function About() {
         <div>
           <img
             className="w-full h-full"
-            src="/public/image/about_us.jpg"
+            src="./public/image/about_us.jpg"
             alt=""
           />
         </div>
