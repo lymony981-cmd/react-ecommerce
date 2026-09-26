@@ -4,10 +4,10 @@ function About() {
   return (
     <div className="max-w-[90%] lg:max-w-5xl mx-auto py-10 font-jost">
       <div className="grid grid-col-1 lg:grid-cols-2 gap-4 items-start px-4 lg:px-0">
-        <div>
+        <div >
           <img
             className="w-full h-full"
-            src="./public/image/about_us.jpg"
+            src="./image/about_us.jpg"
             alt=""
           />
         </div>
