@@ -31,13 +31,13 @@ function Header() {
 
         <ul className=" hidden lg:flex items-center gap-4 font-jost">
           <li>
-            <Na  vLink
+            <NavLink
               to="/"
               className="hover:underline decoration-yellow-200 transition-all 
               aria-[current=page]:underline aria-[current=page]:text-yellow-500"
             >
               Home
-            </Na>
+            </NavLink>
           </li>
           <li>
             <NavLink
