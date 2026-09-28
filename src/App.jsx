@@ -3,7 +3,7 @@ import Home from "./pages/Home"
 import RootLayout from "./layouts/RootLayout"
 import Products from "./pages/Products"
 import Contacts from "./pages/Contacts"
-import About from "./pages/About"
+import About from "./pages/About"  
 import ProductDetail from "./pages/ProductDetail"
 function App() {
   return (

@@ -31,13 +31,13 @@ function Header() {
 
         <ul className=" hidden lg:flex items-center gap-4 font-jost">
           <li>
-            <NavLink
+            <Na  vLink
               to="/"
               className="hover:underline decoration-yellow-200 transition-all 
               aria-[current=page]:underline aria-[current=page]:text-yellow-500"
             >
               Home
-            </NavLink>
+            </Na>
           </li>
           <li>
             <NavLink
@@ -124,7 +124,7 @@ function Header() {
         className={`${isActiveNavbar ? "left-0" : "-left-full"} absolute top-0 z-50 pt-8 p-4 w-64 bg-primary transition-all ease-in-out duration-200 text-white min-h-screen`}
       >
         <div className="flex justify-end">
-          <button
+          <button 
             onClick={() => setIsActiveNavbar(false)}
             className="border border-white border-dashed rounded-full p-2 hover:bg-gray-700 cursor-pointer"
           >
@@ -144,7 +144,7 @@ function Header() {
             </svg>
           </button>
         </div>
-
+ 
         <div className="flex flex-col mt-4">
           <NavLink
             to="/"
